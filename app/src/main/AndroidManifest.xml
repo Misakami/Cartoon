@@ -13,15 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TestCartoonLoder.ImageViewActivity" android:theme="@style/ReadAppTheme"></activity>
-        <activity android:name=".CatlogActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".cartoonLoader.ImageViewActivity"
+            android:theme="@style/ReadAppTheme" />
+        <activity android:name=".catlog.CatlogActivity" />
+        <activity android:name=".nav_homepage.HomePageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".homePage.MainActivity"></activity>
     </application>
 
 </manifest>

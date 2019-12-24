@@ -23,7 +23,7 @@
 15-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:24:22-78
 16
 17    <application
-17-->D:\cartoon\app\src\main\AndroidManifest.xml:7:5-25:19
+17-->D:\cartoon\app\src\main\AndroidManifest.xml:7:5-28:19
 18        android:name="com.example.cartoon.App"
 18-->D:\cartoon\app\src\main\AndroidManifest.xml:8:9-28
 19        android:allowBackup="true"
@@ -39,123 +39,127 @@
 24-->D:\cartoon\app\src\main\AndroidManifest.xml:12:9-54
 25        android:supportsRtl="true"
 25-->D:\cartoon\app\src\main\AndroidManifest.xml:13:9-35
-26        android:theme="@style/AppTheme"
-26-->D:\cartoon\app\src\main\AndroidManifest.xml:14:9-40
-27        android:usesCleartextTraffic="true" >
-27-->D:\cartoon\app\src\main\AndroidManifest.xml:15:9-44
-28        <activity
-28-->D:\cartoon\app\src\main\AndroidManifest.xml:16:9-117
-29            android:name="com.example.cartoon.TestCartoonLoder.ImageViewActivity"
-29-->D:\cartoon\app\src\main\AndroidManifest.xml:16:19-69
-30            android:theme="@style/ReadAppTheme" />
-30-->D:\cartoon\app\src\main\AndroidManifest.xml:16:70-105
-31        <activity android:name="com.example.cartoon.CatlogActivity" />
-31-->D:\cartoon\app\src\main\AndroidManifest.xml:17:9-52
-31-->D:\cartoon\app\src\main\AndroidManifest.xml:17:19-49
-32        <activity android:name="com.example.cartoon.MainActivity" >
-32-->D:\cartoon\app\src\main\AndroidManifest.xml:18:9-24:20
-32-->D:\cartoon\app\src\main\AndroidManifest.xml:18:19-47
-33            <intent-filter>
-33-->D:\cartoon\app\src\main\AndroidManifest.xml:19:13-23:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->D:\cartoon\app\src\main\AndroidManifest.xml:20:17-69
-34-->D:\cartoon\app\src\main\AndroidManifest.xml:20:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->D:\cartoon\app\src\main\AndroidManifest.xml:22:17-77
-36-->D:\cartoon\app\src\main\AndroidManifest.xml:22:27-74
-37            </intent-filter>
-38        </activity>
-39
-40        <service
-40-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:27:9-30:45
-41            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
-41-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:28:13-80
-42            android:enabled="false"
-42-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:29:13-36
-43            android:process=":leakcanary" />
-43-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:30:13-42
-44        <service
-44-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:31:9-34:45
-45            android:name="com.squareup.leakcanary.DisplayLeakService"
-45-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:32:13-70
-46            android:enabled="false"
-46-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:33:13-36
-47            android:process=":leakcanary" />
-47-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:34:13-42
-48
-49        <provider
-49-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:36:9-44:20
-50            android:name="com.squareup.leakcanary.internal.LeakCanaryFileProvider"
-50-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:37:13-83
-51            android:authorities="com.squareup.leakcanary.fileprovider.com.example.cartoon"
-51-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:38:13-88
-52            android:exported="false"
-52-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:39:13-37
-53            android:grantUriPermissions="true" >
-53-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:40:13-47
-54            <meta-data
-54-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:41:13-43:66
-55                android:name="android.support.FILE_PROVIDER_PATHS"
-55-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:42:17-67
-56                android:resource="@xml/leak_canary_file_paths" />
-56-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:43:17-63
-57        </provider>
-58
-59        <activity
-59-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:46:9-59:20
-60            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
-60-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:47:13-80
-61            android:enabled="false"
-61-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:48:13-36
-62            android:icon="@mipmap/leak_canary_icon"
-62-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:49:13-52
-63            android:label="@string/leak_canary_display_activity_label"
-63-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:50:13-71
-64            android:process=":leakcanary"
-64-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:51:13-42
-65            android:taskAffinity="com.squareup.leakcanary.com.example.cartoon"
-65-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:52:13-76
-66            android:theme="@style/leak_canary_LeakCanary.Base" >
-66-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:53:13-63
-67            <intent-filter>
-67-->D:\cartoon\app\src\main\AndroidManifest.xml:19:13-23:29
-68                <action android:name="android.intent.action.MAIN" />
-68-->D:\cartoon\app\src\main\AndroidManifest.xml:20:17-69
-68-->D:\cartoon\app\src\main\AndroidManifest.xml:20:25-66
-69
-70                <category android:name="android.intent.category.LAUNCHER" />
-70-->D:\cartoon\app\src\main\AndroidManifest.xml:22:17-77
-70-->D:\cartoon\app\src\main\AndroidManifest.xml:22:27-74
-71            </intent-filter>
-72        </activity>
-73        <activity
-73-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:60:9-69:68
-74            android:name="com.squareup.leakcanary.internal.RequestStoragePermissionActivity"
-74-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:61:13-93
-75            android:enabled="false"
-75-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:62:13-36
-76            android:excludeFromRecents="true"
-76-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:63:13-46
-77            android:icon="@mipmap/leak_canary_icon"
-77-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:64:13-52
-78            android:label="@string/leak_canary_storage_permission_activity_label"
-78-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:65:13-82
-79            android:process=":leakcanary"
-79-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:66:13-42
-80            android:roundIcon="@mipmap/leak_canary_icon"
-80-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:67:13-57
-81            android:taskAffinity="com.squareup.leakcanary.com.example.cartoon"
-81-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:68:13-76
-82            android:theme="@style/leak_canary_Theme.Transparent" />
-82-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:69:13-65
-83
-84        <meta-data
-84-->[com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55dd7fb8c3756c733cacde48308cce42\jetified-okhttp3-integration-4.6.1\AndroidManifest.xml:11:9-13:43
-85            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-85-->[com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55dd7fb8c3756c733cacde48308cce42\jetified-okhttp3-integration-4.6.1\AndroidManifest.xml:12:13-84
-86            android:value="GlideModule" />
-86-->[com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55dd7fb8c3756c733cacde48308cce42\jetified-okhttp3-integration-4.6.1\AndroidManifest.xml:13:13-40
-87    </application>
-88
-89</manifest>
+26        android:testOnly="true"
+27        android:theme="@style/AppTheme"
+27-->D:\cartoon\app\src\main\AndroidManifest.xml:14:9-40
+28        android:usesCleartextTraffic="true" >
+28-->D:\cartoon\app\src\main\AndroidManifest.xml:15:9-44
+29        <activity
+29-->D:\cartoon\app\src\main\AndroidManifest.xml:16:9-18:51
+30            android:name="com.example.cartoon.cartoonLoader.ImageViewActivity"
+30-->D:\cartoon\app\src\main\AndroidManifest.xml:17:13-60
+31            android:theme="@style/ReadAppTheme" />
+31-->D:\cartoon\app\src\main\AndroidManifest.xml:18:13-48
+32        <activity android:name="com.example.cartoon.catlog.CatlogActivity" />
+32-->D:\cartoon\app\src\main\AndroidManifest.xml:19:9-59
+32-->D:\cartoon\app\src\main\AndroidManifest.xml:19:19-56
+33        <activity android:name="com.example.cartoon.nav_homepage.HomePageActivity" >
+33-->D:\cartoon\app\src\main\AndroidManifest.xml:20:9-26:20
+33-->D:\cartoon\app\src\main\AndroidManifest.xml:20:19-64
+34            <intent-filter>
+34-->D:\cartoon\app\src\main\AndroidManifest.xml:21:13-25:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->D:\cartoon\app\src\main\AndroidManifest.xml:22:17-69
+35-->D:\cartoon\app\src\main\AndroidManifest.xml:22:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->D:\cartoon\app\src\main\AndroidManifest.xml:24:17-77
+37-->D:\cartoon\app\src\main\AndroidManifest.xml:24:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity android:name="com.example.cartoon.homePage.MainActivity" />
+40-->D:\cartoon\app\src\main\AndroidManifest.xml:27:9-68
+40-->D:\cartoon\app\src\main\AndroidManifest.xml:27:19-56
+41
+42        <service
+42-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:27:9-30:45
+43            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+43-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:28:13-80
+44            android:enabled="false"
+44-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:29:13-36
+45            android:process=":leakcanary" />
+45-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:30:13-42
+46        <service
+46-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:31:9-34:45
+47            android:name="com.squareup.leakcanary.DisplayLeakService"
+47-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:32:13-70
+48            android:enabled="false"
+48-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:33:13-36
+49            android:process=":leakcanary" />
+49-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:34:13-42
+50
+51        <provider
+51-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:36:9-44:20
+52            android:name="com.squareup.leakcanary.internal.LeakCanaryFileProvider"
+52-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:37:13-83
+53            android:authorities="com.squareup.leakcanary.fileprovider.com.example.cartoon"
+53-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:38:13-88
+54            android:exported="false"
+54-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:39:13-37
+55            android:grantUriPermissions="true" >
+55-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:40:13-47
+56            <meta-data
+56-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:41:13-43:66
+57                android:name="android.support.FILE_PROVIDER_PATHS"
+57-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:42:17-67
+58                android:resource="@xml/leak_canary_file_paths" />
+58-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:43:17-63
+59        </provider>
+60
+61        <activity
+61-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:46:9-59:20
+62            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+62-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:47:13-80
+63            android:enabled="false"
+63-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:48:13-36
+64            android:icon="@mipmap/leak_canary_icon"
+64-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:49:13-52
+65            android:label="@string/leak_canary_display_activity_label"
+65-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:50:13-71
+66            android:process=":leakcanary"
+66-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:51:13-42
+67            android:taskAffinity="com.squareup.leakcanary.com.example.cartoon"
+67-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:52:13-76
+68            android:theme="@style/leak_canary_LeakCanary.Base" >
+68-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:53:13-63
+69            <intent-filter>
+69-->D:\cartoon\app\src\main\AndroidManifest.xml:21:13-25:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->D:\cartoon\app\src\main\AndroidManifest.xml:22:17-69
+70-->D:\cartoon\app\src\main\AndroidManifest.xml:22:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->D:\cartoon\app\src\main\AndroidManifest.xml:24:17-77
+72-->D:\cartoon\app\src\main\AndroidManifest.xml:24:27-74
+73            </intent-filter>
+74        </activity>
+75        <activity
+75-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:60:9-69:68
+76            android:name="com.squareup.leakcanary.internal.RequestStoragePermissionActivity"
+76-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:61:13-93
+77            android:enabled="false"
+77-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:62:13-36
+78            android:excludeFromRecents="true"
+78-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:63:13-46
+79            android:icon="@mipmap/leak_canary_icon"
+79-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:64:13-52
+80            android:label="@string/leak_canary_storage_permission_activity_label"
+80-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:65:13-82
+81            android:process=":leakcanary"
+81-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:66:13-42
+82            android:roundIcon="@mipmap/leak_canary_icon"
+82-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:67:13-57
+83            android:taskAffinity="com.squareup.leakcanary.com.example.cartoon"
+83-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:68:13-76
+84            android:theme="@style/leak_canary_Theme.Transparent" />
+84-->[com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:69:13-65
+85
+86        <meta-data
+86-->[com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55dd7fb8c3756c733cacde48308cce42\jetified-okhttp3-integration-4.6.1\AndroidManifest.xml:11:9-13:43
+87            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+87-->[com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55dd7fb8c3756c733cacde48308cce42\jetified-okhttp3-integration-4.6.1\AndroidManifest.xml:12:13-84
+88            android:value="GlideModule" />
+88-->[com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55dd7fb8c3756c733cacde48308cce42\jetified-okhttp3-integration-4.6.1\AndroidManifest.xml:13:13-40
+89    </application>
+90
+91</manifest>

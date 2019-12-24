@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import com.bumptech.glide.manager.Lifecycle;
 import com.bumptech.glide.manager.RequestManagerRetriever;
 import com.bumptech.glide.manager.RequestManagerTreeNode;
-import com.example.cartoon.Model.Util.GlideRequests;
+import com.example.cartoon.model.Util.GlideRequests;
 
 /**
  * Generated code, do not modify

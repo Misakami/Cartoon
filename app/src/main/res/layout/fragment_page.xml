@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <com.example.cartoon.Widget.CircleProgress
+    <com.example.cartoon.widget.CircleProgress
         android:id="@+id/pageView_loading"
         android:layout_width="70dp"
         android:layout_height="70dp"

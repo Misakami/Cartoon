@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule;
-import com.example.cartoon.Model.Util.MyOkHttpGlideModule;
+import com.example.cartoon.model.Util.MyOkHttpGlideModule;
 import java.util.Collections;
 import java.util.Set;
 
@@ -15,7 +15,7 @@ final class GeneratedAppGlideModuleImpl extends GeneratedAppGlideModule {
   public GeneratedAppGlideModuleImpl(Context context) {
     appGlideModule = new MyOkHttpGlideModule();
     if (Log.isLoggable("Glide", Log.DEBUG)) {
-      Log.d("Glide", "Discovered AppGlideModule from annotation: com.example.cartoon.Model.Util.MyOkHttpGlideModule");
+      Log.d("Glide", "Discovered AppGlideModule from annotation: com.example.cartoon.model.Util.MyOkHttpGlideModule");
       Log.d("Glide", "Discovered LibraryGlideModule from annotation: com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule");
     }
   }
