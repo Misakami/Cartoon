@@ -1224,12 +1224,14 @@ id bottom
 id bottomNavigationView
 id buttonPanel
 id button_text
+id cartoon_blurImage
 id cartoon_img
 id cartoon_info
 id cartoon_lastUpdate
 id cartoon_page
 id cartoon_title
 id catlog
+id catlog_linear
 id catlog_recycle
 id center
 id center_horizontal
@@ -1273,6 +1275,7 @@ id fill_vertical
 id filled
 id fixed
 id forever
+id fragment_recycle
 id from
 id ghost_view
 id glide_custom_view_target_tag
@@ -1293,6 +1296,7 @@ id item_title
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id last_down_top
 id last_update
 id leak_canary_action
 id leak_canary_display_leak_failure
@@ -1375,6 +1379,7 @@ id search_view
 id search_voice_btn
 id select_dialog_listview
 id selected
+id shadow
 id shortcut
 id showCustom
 id showHome
@@ -1393,6 +1398,8 @@ id src_in
 id src_over
 id standard
 id start
+id statusbarutil_fake_status_bar_view
+id statusbarutil_translucent_view
 id stretch
 id submenuarrow
 id submit_area
@@ -2003,6 +2010,7 @@ style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
+style Translucent
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar

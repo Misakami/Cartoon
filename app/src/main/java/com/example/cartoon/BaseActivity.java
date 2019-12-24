@@ -24,13 +24,13 @@ import java.lang.reflect.Method;
 public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         this.getWindow()
                 .getDecorView()
                 .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         MIUISetStatusBarLightMode(this.getWindow(), true);
         setWindowStatusBarColor(this, R.color.colorPrimary);
         fitNotch();
+        super.onCreate(savedInstanceState);
     }
 
     protected void fitNotch() {

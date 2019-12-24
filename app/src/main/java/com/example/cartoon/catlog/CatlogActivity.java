@@ -1,28 +1,37 @@
 package com.example.cartoon.catlog;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.example.cartoon.BaseActivity;
 import com.example.cartoon.R;
 import com.example.cartoon.model.Bean.Cartoon;
+import com.example.cartoon.model.Util.BlurUtil;
 import com.example.cartoon.model.Util.JsoupUtil;
 import com.example.cartoon.model.MyDiffCallback;
+import com.jaeger.library.StatusBarUtil;
 
 import java.util.Collections;
 
 /**
- *   漫画目录
+ * 漫画目录
  */
 public class CatlogActivity extends BaseActivity {
     public static String CHOSECARTOON = "KATONG";
@@ -34,11 +43,13 @@ public class CatlogActivity extends BaseActivity {
     private RecyclerView recyclerView;
     private Cartoon cartoon;
     private CatlogAdapter adapter;
+    private ImageView cartoon_blurImage;
     private boolean read = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarUtil.setTranslucentForImageView(this, cartoon_blurImage);
         setContentView(R.layout.activity_catlog);
         cartoonImg = findViewById(R.id.cartoon_img);
         cartoonInfo = findViewById(R.id.cartoon_info);
@@ -46,6 +57,7 @@ public class CatlogActivity extends BaseActivity {
         recyclerView = findViewById(R.id.catlog_recycle);
         lastUpdate = findViewById(R.id.cartoon_lastUpdate);
         swtich = findViewById(R.id.switch_read);
+        cartoon_blurImage = findViewById(R.id.cartoon_blurImage);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra(CHOSECARTOON);
@@ -81,7 +93,13 @@ public class CatlogActivity extends BaseActivity {
                 .load(cartoon.getCoverSrc())
                 .thumbnail(0.1f)
                 .apply(options)
-                .into(cartoonImg);
+                .into(new SimpleTarget<Drawable>() {
+                    @Override
+                    public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                        cartoonImg.setImageDrawable(resource);
+                        cartoon_blurImage.setImageBitmap(BlurUtil.blurBitmap(CatlogActivity.this,resource));
+                    }
+                });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new CatlogAdapter(cartoon);
         recyclerView.setAdapter(adapter);

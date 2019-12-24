@@ -1,11 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\224425975f336aee2566e0a508699380\jetified-leakcanary-support-fragment-1.6.1\AndroidManifest.xml:17:1-25:12
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:17:1-72:12
+MERGED from [com.jaeger.statusbarutil:library:1.5.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\ac69d66f1740b6e92ade35b8100b27c3\jetified-library-1.5.1\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\2973d70edb285e47f50dc157a4994b03\jetified-navigation-ui-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.carson_ho:SearchLayout:1.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\a787c958cffef709751708bb625a0c2c\jetified-SearchLayout-1.0.1\AndroidManifest.xml:2:1-17:12
@@ -49,20 +50,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\YCKJ2923\.gradle\cac
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e7284bace20bec096294b5474e153fbf\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\c073c929da6ad4e112abaac7d3212747\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e72949b043b8df7a6068dab5e7cd21f2\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:11-69
@@ -71,11 +72,13 @@ ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:7:5-28:19
+ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:7:5-27:19
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\224425975f336aee2566e0a508699380\jetified-leakcanary-support-fragment-1.6.1\AndroidManifest.xml:22:5-23:19
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\224425975f336aee2566e0a508699380\jetified-leakcanary-support-fragment-1.6.1\AndroidManifest.xml:22:5-23:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:26:5-70:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:26:5-70:19
+MERGED from [com.jaeger.statusbarutil:library:1.5.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\ac69d66f1740b6e92ade35b8100b27c3\jetified-library-1.5.1\AndroidManifest.xml:11:5-20
+MERGED from [com.jaeger.statusbarutil:library:1.5.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\ac69d66f1740b6e92ade35b8100b27c3\jetified-library-1.5.1\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.carson_ho:SearchLayout:1.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\a787c958cffef709751708bb625a0c2c\jetified-SearchLayout-1.0.1\AndroidManifest.xml:11:5-15:19
@@ -136,10 +139,6 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:24:27-74
-activity#com.example.cartoon.homePage.MainActivity
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:27:9-68
-	android:name
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:27:19-56
 uses-sdk
 INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
@@ -148,6 +147,8 @@ MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.1] C:\Users
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\224425975f336aee2566e0a508699380\jetified-leakcanary-support-fragment-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.jaeger.statusbarutil:library:1.5.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\ac69d66f1740b6e92ade35b8100b27c3\jetified-library-1.5.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jaeger.statusbarutil:library:1.5.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\ac69d66f1740b6e92ade35b8100b27c3\jetified-library-1.5.1\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\2973d70edb285e47f50dc157a4994b03\jetified-navigation-ui-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\2973d70edb285e47f50dc157a4994b03\jetified-navigation-ui-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:20:5-44

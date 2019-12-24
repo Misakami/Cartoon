@@ -28,4 +28,8 @@
             android:text="@string/search"
             tools:text="@string/search"/>
     </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

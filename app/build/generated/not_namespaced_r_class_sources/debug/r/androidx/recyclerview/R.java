@@ -110,34 +110,34 @@ public final class R {
         public static final int async = 0x7f08003e;
         public static final int blocking = 0x7f080043;
         public static final int bottom = 0x7f080044;
-        public static final int chronometer = 0x7f080056;
-        public static final int end = 0x7f08006c;
-        public static final int forever = 0x7f080078;
-        public static final int icon = 0x7f080081;
-        public static final int icon_group = 0x7f080082;
-        public static final int info = 0x7f080085;
-        public static final int italic = 0x7f080087;
-        public static final int item_touch_helper_previous_elevation = 0x7f08008a;
-        public static final int left = 0x7f080098;
-        public static final int line1 = 0x7f080099;
-        public static final int line3 = 0x7f08009a;
-        public static final int none = 0x7f0800ad;
-        public static final int normal = 0x7f0800ae;
-        public static final int notification_background = 0x7f0800af;
-        public static final int notification_main_column = 0x7f0800b0;
-        public static final int notification_main_column_container = 0x7f0800b1;
-        public static final int right = 0x7f0800c4;
-        public static final int right_icon = 0x7f0800c5;
-        public static final int right_side = 0x7f0800c6;
-        public static final int start = 0x7f0800f0;
-        public static final int tag_transition_group = 0x7f0800fb;
-        public static final int tag_unhandled_key_event_manager = 0x7f0800fc;
-        public static final int tag_unhandled_key_listeners = 0x7f0800fd;
-        public static final int text = 0x7f0800fe;
-        public static final int text2 = 0x7f0800ff;
-        public static final int time = 0x7f080107;
-        public static final int title = 0x7f080109;
-        public static final int top = 0x7f08010c;
+        public static final int chronometer = 0x7f080058;
+        public static final int end = 0x7f08006e;
+        public static final int forever = 0x7f08007a;
+        public static final int icon = 0x7f080084;
+        public static final int icon_group = 0x7f080085;
+        public static final int info = 0x7f080088;
+        public static final int italic = 0x7f08008a;
+        public static final int item_touch_helper_previous_elevation = 0x7f08008d;
+        public static final int left = 0x7f08009c;
+        public static final int line1 = 0x7f08009d;
+        public static final int line3 = 0x7f08009e;
+        public static final int none = 0x7f0800b1;
+        public static final int normal = 0x7f0800b2;
+        public static final int notification_background = 0x7f0800b3;
+        public static final int notification_main_column = 0x7f0800b4;
+        public static final int notification_main_column_container = 0x7f0800b5;
+        public static final int right = 0x7f0800c8;
+        public static final int right_icon = 0x7f0800c9;
+        public static final int right_side = 0x7f0800ca;
+        public static final int start = 0x7f0800f5;
+        public static final int tag_transition_group = 0x7f080102;
+        public static final int tag_unhandled_key_event_manager = 0x7f080103;
+        public static final int tag_unhandled_key_listeners = 0x7f080104;
+        public static final int text = 0x7f080105;
+        public static final int text2 = 0x7f080106;
+        public static final int time = 0x7f08010e;
+        public static final int title = 0x7f080110;
+        public static final int top = 0x7f080113;
     }
     public static final class integer {
         private integer() {}
@@ -167,9 +167,9 @@ public final class R {
         public static final int TextAppearance_Compat_Notification_Line2 = 0x7f100119;
         public static final int TextAppearance_Compat_Notification_Time = 0x7f10011a;
         public static final int TextAppearance_Compat_Notification_Title = 0x7f10011b;
-        public static final int Widget_Compat_NotificationActionContainer = 0x7f1001c4;
-        public static final int Widget_Compat_NotificationActionText = 0x7f1001c5;
-        public static final int Widget_Support_CoordinatorLayout = 0x7f1001f4;
+        public static final int Widget_Compat_NotificationActionContainer = 0x7f1001c5;
+        public static final int Widget_Compat_NotificationActionText = 0x7f1001c6;
+        public static final int Widget_Support_CoordinatorLayout = 0x7f1001f5;
     }
     public static final class styleable {
         private styleable() {}
