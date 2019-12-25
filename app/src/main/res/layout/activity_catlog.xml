@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".catlog.CatlogActivity">
+    tools:context=".ui.catlog.CatlogActivity">
 
     <ImageView
         android:id="@+id/cartoon_blurImage"

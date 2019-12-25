@@ -8,20 +8,18 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
+        android:background="@color/colorWhite"
         android:layout_height="wrap_content"
         app:menu="@menu/nav_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <fragment
-        android:id="@+id/nav_homepage"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:defaultNavHost="false"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_homepage"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_homepage" />
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

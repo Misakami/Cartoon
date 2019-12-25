@@ -14,10 +14,11 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".cartoonLoader.ImageViewActivity"
+            android:name=".ui.cartoonLoader.ImageViewActivity"
             android:theme="@style/ReadAppTheme" />
-        <activity android:name=".catlog.CatlogActivity" />
-        <activity android:name=".nav_homepage.HomePageActivity">
+        <activity android:name=".ui.catlog.CatlogActivity" />
+        <activity android:name=".ui.homepage.HomePageActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
