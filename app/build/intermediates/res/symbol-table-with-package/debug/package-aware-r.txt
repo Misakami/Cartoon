@@ -1127,6 +1127,7 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_new
 drawable ic_search
 drawable ic_setup
 drawable leak_canary_icon_foreground
@@ -1220,6 +1221,10 @@ id barrier
 id battery
 id beginning
 id blocking
+id bookshelf_crv
+id bookshelf_name
+id bookshelf_new
+id bookshelf_rv
 id bottom
 id bottomNavigationView
 id buttonPanel
@@ -1323,7 +1328,6 @@ id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
 id nav_controller_view_tag
-id nav_homepage
 id navigation_bookShelf
 id navigation_header_container
 id navigation_search
@@ -1351,7 +1355,6 @@ id power_num
 id progress_circular
 id progress_horizontal
 id radio
-id recycler_view
 id right
 id right_icon
 id right_side
@@ -1375,7 +1378,6 @@ id search_go_btn
 id search_mag_icon
 id search_plate
 id search_src_text
-id search_view
 id search_voice_btn
 id select_dialog_listview
 id selected
@@ -1418,6 +1420,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1444,6 +1447,7 @@ id useLogo
 id view_offset_helper
 id view_search
 id visible
+id vp_homepage
 id withText
 id wrap
 id wrap_content
@@ -1505,7 +1509,6 @@ layout abc_tooltip
 layout activity_catlog
 layout activity_homepage
 layout activity_image_view
-layout activity_main
 layout cartoon_page
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -1526,6 +1529,7 @@ layout fragment_bookshelf
 layout fragment_page
 layout fragment_search
 layout fragment_setup
+layout item_bookshelf
 layout item_catlog
 layout item_search
 layout leak_canary_display_leak
@@ -1550,7 +1554,6 @@ menu nav_bottom
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap leak_canary_icon
-navigation nav_homepage
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

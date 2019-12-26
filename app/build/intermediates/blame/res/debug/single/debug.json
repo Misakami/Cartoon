@@ -260,6 +260,10 @@
         "source": "C:\\Users\\YCKJ2923\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
+        "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_bookshelf.xml.flat",
+        "source": "D:\\cartoon\\app\\src\\main\\res\\layout\\item_bookshelf.xml"
+    },
+    {
         "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\YCKJ2923\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
@@ -1036,10 +1040,6 @@
         "source": "C:\\Users\\YCKJ2923\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\anim\\btn_radio_to_off_mtrl_ring_outer_path_animation.xml"
     },
     {
-        "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_homepage.xml.flat",
-        "source": "D:\\cartoon\\app\\src\\main\\res\\navigation\\nav_homepage.xml"
-    },
-    {
         "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\YCKJ2923\\.gradle\\caches\\transforms-2\\files-2.1\\7f6c41cc2a14c0fbaa8d0166c17dc544\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
@@ -1454,6 +1454,10 @@
     {
         "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "C:\\Users\\YCKJ2923\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_new.xml.flat",
+        "source": "D:\\cartoon\\app\\src\\main\\res\\drawable\\ic_new.xml"
     },
     {
         "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_avd_hide_password.xml.flat",
@@ -2058,10 +2062,6 @@
     {
         "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\layout_leak_canary_ref_row.xml.flat",
         "source": "C:\\Users\\YCKJ2923\\.gradle\\caches\\transforms-2\\files-2.1\\dfa79cdba989b8eeb523b9eea6f78765\\jetified-leakcanary-android-1.6.1\\res\\layout\\leak_canary_ref_row.xml"
-    },
-    {
-        "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "D:\\cartoon\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "D:\\cartoon\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_material.xml.flat",

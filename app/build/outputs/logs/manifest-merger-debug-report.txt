@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\224425975f336aee2566e0a508699380\jetified-leakcanary-support-fragment-1.6.1\AndroidManifest.xml:17:1-25:12
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:17:1-72:12
 MERGED from [com.jaeger.statusbarutil:library:1.5.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\ac69d66f1740b6e92ade35b8100b27c3\jetified-library-1.5.1\AndroidManifest.xml:2:1-13:12
@@ -16,6 +16,10 @@ MERGED from [com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2
 MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\6ddc739ca58e175b0b0c9f88329582bf\glide-4.10.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\99839343cfb353ec06147cc6109cf9b2\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment:2.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\834397949403ccef5558b21c9967f60e\navigation-fragment-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-ktx:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\47b3b43c70c069bdd7f10a84430f4439\room-ktx-2.2.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-rxjava2:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\9994cc73bc35046f7e5193d2ff64be99\room-rxjava2-2.2.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-guava:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\768df7048bf40fb781d5b545110d2f0f\room-guava-2.2.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e65e4154abbc265ac4d89a7a3d13f74e\room-runtime-2.2.3\AndroidManifest.xml:17:1-30:12
 MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\730a90a73039d6e93d2a41370e8fe07e\leakcanary-analyzer-1.6.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\67e3a22614326cadf216274f01d6d423\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\984e9edaa0792ad5f44429be517dd8ee\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -39,6 +43,11 @@ MERGED from [androidx.core:core:1.1.0] C:\Users\YCKJ2923\.gradle\caches\transfor
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\fb37b7f790edcc9d7fe6d3e5314b8c56\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\c034f7088c57e18a85dafc68b942945f\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\5bf5244b1332845473953802a5c09e04\gifdecoder-4.10.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\5fa9083dab59ec66a8e8d2104bc9b94b\sqlite-framework-2.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\a7fe82364247c45122c7fd1113a3991b\sqlite-2.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e7284bace20bec096294b5474e153fbf\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\c073c929da6ad4e112abaac7d3212747\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\5604fc809a66d0a03154a7cdf7824338\core-runtime-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\8506ddbc1ed30380944ad7f0369e4760\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\35d6382087ac1999db47004e3bf24934\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\8893b90c6f2a61edd1acfa898cb4cde1\print-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -47,23 +56,20 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\YCKJ2923\.gradle
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55566c395264c409f125230efea7fd76\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\1bd2f6a321d0549948d7f1edb5f036d6\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\f031147607d3aeb238f176a00d5e308c\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e7284bace20bec096294b5474e153fbf\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\c073c929da6ad4e112abaac7d3212747\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e72949b043b8df7a6068dab5e7cd21f2\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:2:11-69
@@ -72,7 +78,7 @@ ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:7:5-27:19
+ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:7:5-28:19
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\224425975f336aee2566e0a508699380\jetified-leakcanary-support-fragment-1.6.1\AndroidManifest.xml:22:5-23:19
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\224425975f336aee2566e0a508699380\jetified-leakcanary-support-fragment-1.6.1\AndroidManifest.xml:22:5-23:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\dfa79cdba989b8eeb523b9eea6f78765\jetified-leakcanary-android-1.6.1\AndroidManifest.xml:26:5-70:19
@@ -89,6 +95,8 @@ MERGED from [com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55dd7fb8c3756c733cacde48308cce42\jetified-okhttp3-integration-4.6.1\AndroidManifest.xml:10:5-14:19
 MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\6ddc739ca58e175b0b0c9f88329582bf\glide-4.10.0\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\6ddc739ca58e175b0b0c9f88329582bf\glide-4.10.0\AndroidManifest.xml:10:5-20
+MERGED from [androidx.room:room-runtime:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e65e4154abbc265ac4d89a7a3d13f74e\room-runtime-2.2.3\AndroidManifest.xml:24:5-28:19
+MERGED from [androidx.room:room-runtime:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e65e4154abbc265ac4d89a7a3d13f74e\room-runtime-2.2.3\AndroidManifest.xml:24:5-28:19
 MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\730a90a73039d6e93d2a41370e8fe07e\leakcanary-analyzer-1.6.1\AndroidManifest.xml:22:5-20
 MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\730a90a73039d6e93d2a41370e8fe07e\leakcanary-analyzer-1.6.1\AndroidManifest.xml:22:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:5-89
@@ -115,30 +123,32 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\YC
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:15:9-44
 	android:name
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:8:9-28
-activity#com.example.cartoon.cartoonLoader.ImageViewActivity
+activity#com.example.cartoon.ui.cartoonLoader.ImageViewActivity
 ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:16:9-18:51
 	android:theme
 		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:18:13-48
 	android:name
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:17:13-60
-activity#com.example.cartoon.catlog.CatlogActivity
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:19:9-59
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:17:13-63
+activity#com.example.cartoon.ui.catlog.CatlogActivity
+ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:19:9-62
 	android:name
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:19:19-56
-activity#com.example.cartoon.nav_homepage.HomePageActivity
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:20:9-26:20
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:19:19-59
+activity#com.example.cartoon.ui.homepage.HomePageActivity
+ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:20:9-27:20
+	android:windowSoftInputMode
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:21:13-52
 	android:name
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:20:19-64
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:20:19-63
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from D:\cartoon\app\src\main\AndroidManifest.xml:25:27-74
 uses-sdk
 INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
@@ -167,6 +177,14 @@ MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\YCKJ2923\.gradle
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\99839343cfb353ec06147cc6109cf9b2\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-fragment:2.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\834397949403ccef5558b21c9967f60e\navigation-fragment-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\834397949403ccef5558b21c9967f60e\navigation-fragment-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\47b3b43c70c069bdd7f10a84430f4439\room-ktx-2.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\47b3b43c70c069bdd7f10a84430f4439\room-ktx-2.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-rxjava2:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\9994cc73bc35046f7e5193d2ff64be99\room-rxjava2-2.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-rxjava2:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\9994cc73bc35046f7e5193d2ff64be99\room-rxjava2-2.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-guava:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\768df7048bf40fb781d5b545110d2f0f\room-guava-2.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-guava:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\768df7048bf40fb781d5b545110d2f0f\room-guava-2.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e65e4154abbc265ac4d89a7a3d13f74e\room-runtime-2.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e65e4154abbc265ac4d89a7a3d13f74e\room-runtime-2.2.3\AndroidManifest.xml:20:5-22:41
 MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\730a90a73039d6e93d2a41370e8fe07e\leakcanary-analyzer-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\730a90a73039d6e93d2a41370e8fe07e\leakcanary-analyzer-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\67e3a22614326cadf216274f01d6d423\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
@@ -213,6 +231,16 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\YCKJ2923\.gradle\caches\
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\c034f7088c57e18a85dafc68b942945f\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\5bf5244b1332845473953802a5c09e04\gifdecoder-4.10.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\5bf5244b1332845473953802a5c09e04\gifdecoder-4.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\5fa9083dab59ec66a8e8d2104bc9b94b\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\5fa9083dab59ec66a8e8d2104bc9b94b\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\a7fe82364247c45122c7fd1113a3991b\sqlite-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\a7fe82364247c45122c7fd1113a3991b\sqlite-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e7284bace20bec096294b5474e153fbf\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e7284bace20bec096294b5474e153fbf\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\c073c929da6ad4e112abaac7d3212747\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\c073c929da6ad4e112abaac7d3212747\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\5604fc809a66d0a03154a7cdf7824338\core-runtime-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\5604fc809a66d0a03154a7cdf7824338\core-runtime-2.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\8506ddbc1ed30380944ad7f0369e4760\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\8506ddbc1ed30380944ad7f0369e4760\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\35d6382087ac1999db47004e3bf24934\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
@@ -229,12 +257,6 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\YCKJ2923\.grad
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\1bd2f6a321d0549948d7f1edb5f036d6\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\f031147607d3aeb238f176a00d5e308c\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\f031147607d3aeb238f176a00d5e308c\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e7284bace20bec096294b5474e153fbf\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e7284bace20bec096294b5474e153fbf\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\c073c929da6ad4e112abaac7d3212747\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\c073c929da6ad4e112abaac7d3212747\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e72949b043b8df7a6068dab5e7cd21f2\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e72949b043b8df7a6068dab5e7cd21f2\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 INJECTED from D:\cartoon\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -327,3 +349,9 @@ ADDED from [com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ29
 		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55dd7fb8c3756c733cacde48308cce42\jetified-okhttp3-integration-4.6.1\AndroidManifest.xml:13:13-40
 	android:name
 		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.6.1] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\55dd7fb8c3756c733cacde48308cce42\jetified-okhttp3-integration-4.6.1\AndroidManifest.xml:12:13-84
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e65e4154abbc265ac4d89a7a3d13f74e\room-runtime-2.2.3\AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e65e4154abbc265ac4d89a7a3d13f74e\room-runtime-2.2.3\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.room:room-runtime:2.2.3] C:\Users\YCKJ2923\.gradle\caches\transforms-2\files-2.1\e65e4154abbc265ac4d89a7a3d13f74e\room-runtime-2.2.3\AndroidManifest.xml:26:13-74
