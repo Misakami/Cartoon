@@ -30,7 +30,7 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
     this.__insertionAdapterOfNetCartoon = new EntityInsertionAdapter<NetCartoon>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `netCartoon` (`ncId`,`cartoonName`,`url`,`siteName`,`lastUpdates`,`introduction`,`coverSrc`,`lastRead`,`lastReadLast`,`catalogsSize`,`time`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `netCartoon` (`ncId`,`cartoonName`,`url`,`siteType`,`lastUpdates`,`introduction`,`coverSrc`,`lastReadLast`,`catalogsSize`,`time`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -46,11 +46,7 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
         } else {
           stmt.bindString(3, value.getUrl());
         }
-        if (value.getSiteName() == null) {
-          stmt.bindNull(4);
-        } else {
-          stmt.bindString(4, value.getSiteName());
-        }
+        stmt.bindLong(4, value.getSiteType());
         if (value.getLastUpdates() == null) {
           stmt.bindNull(5);
         } else {
@@ -66,16 +62,15 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
         } else {
           stmt.bindString(7, value.getCoverSrc());
         }
-        stmt.bindLong(8, value.getLastRead());
-        stmt.bindLong(9, value.getLastReadLast());
-        stmt.bindLong(10, value.getCatalogsSize());
-        stmt.bindLong(11, value.getTime());
+        stmt.bindLong(8, value.getLastReadLast());
+        stmt.bindLong(9, value.getCatalogsSize());
+        stmt.bindLong(10, value.getTime());
       }
     };
     this.__updateAdapterOfNetCartoon = new EntityDeletionOrUpdateAdapter<NetCartoon>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `netCartoon` SET `ncId` = ?,`cartoonName` = ?,`url` = ?,`siteName` = ?,`lastUpdates` = ?,`introduction` = ?,`coverSrc` = ?,`lastRead` = ?,`lastReadLast` = ?,`catalogsSize` = ?,`time` = ? WHERE `ncId` = ?";
+        return "UPDATE OR ABORT `netCartoon` SET `ncId` = ?,`cartoonName` = ?,`url` = ?,`siteType` = ?,`lastUpdates` = ?,`introduction` = ?,`coverSrc` = ?,`lastReadLast` = ?,`catalogsSize` = ?,`time` = ? WHERE `ncId` = ?";
       }
 
       @Override
@@ -91,11 +86,7 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
         } else {
           stmt.bindString(3, value.getUrl());
         }
-        if (value.getSiteName() == null) {
-          stmt.bindNull(4);
-        } else {
-          stmt.bindString(4, value.getSiteName());
-        }
+        stmt.bindLong(4, value.getSiteType());
         if (value.getLastUpdates() == null) {
           stmt.bindNull(5);
         } else {
@@ -111,17 +102,16 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
         } else {
           stmt.bindString(7, value.getCoverSrc());
         }
-        stmt.bindLong(8, value.getLastRead());
-        stmt.bindLong(9, value.getLastReadLast());
-        stmt.bindLong(10, value.getCatalogsSize());
-        stmt.bindLong(11, value.getTime());
-        stmt.bindLong(12, value.getNcId());
+        stmt.bindLong(8, value.getLastReadLast());
+        stmt.bindLong(9, value.getCatalogsSize());
+        stmt.bindLong(10, value.getTime());
+        stmt.bindLong(11, value.getNcId());
       }
     };
     this.__preparedStmtOfDelect = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "delete from netCartoon where siteName = ? and cartoonName = ?";
+        final String _query = "delete from netCartoon where siteType = ? and cartoonName = ?";
         return _query;
       }
     };
@@ -152,15 +142,11 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
   }
 
   @Override
-  public void delect(final String siteName, final String cartoonName) {
+  public void delect(final int siteType, final String cartoonName) {
     __db.assertNotSuspendingTransaction();
     final SupportSQLiteStatement _stmt = __preparedStmtOfDelect.acquire();
     int _argIndex = 1;
-    if (siteName == null) {
-      _stmt.bindNull(_argIndex);
-    } else {
-      _stmt.bindString(_argIndex, siteName);
-    }
+    _stmt.bindLong(_argIndex, siteType);
     _argIndex = 2;
     if (cartoonName == null) {
       _stmt.bindNull(_argIndex);
@@ -187,11 +173,10 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
       final int _cursorIndexOfNcId = CursorUtil.getColumnIndexOrThrow(_cursor, "ncId");
       final int _cursorIndexOfCartoonName = CursorUtil.getColumnIndexOrThrow(_cursor, "cartoonName");
       final int _cursorIndexOfUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "url");
-      final int _cursorIndexOfSiteName = CursorUtil.getColumnIndexOrThrow(_cursor, "siteName");
+      final int _cursorIndexOfSiteType = CursorUtil.getColumnIndexOrThrow(_cursor, "siteType");
       final int _cursorIndexOfLastUpdates = CursorUtil.getColumnIndexOrThrow(_cursor, "lastUpdates");
       final int _cursorIndexOfIntroduction = CursorUtil.getColumnIndexOrThrow(_cursor, "introduction");
       final int _cursorIndexOfCoverSrc = CursorUtil.getColumnIndexOrThrow(_cursor, "coverSrc");
-      final int _cursorIndexOfLastRead = CursorUtil.getColumnIndexOrThrow(_cursor, "lastRead");
       final int _cursorIndexOfLastReadLast = CursorUtil.getColumnIndexOrThrow(_cursor, "lastReadLast");
       final int _cursorIndexOfCatalogsSize = CursorUtil.getColumnIndexOrThrow(_cursor, "catalogsSize");
       final int _cursorIndexOfTime = CursorUtil.getColumnIndexOrThrow(_cursor, "time");
@@ -208,9 +193,9 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
         final String _tmpUrl;
         _tmpUrl = _cursor.getString(_cursorIndexOfUrl);
         _item.setUrl(_tmpUrl);
-        final String _tmpSiteName;
-        _tmpSiteName = _cursor.getString(_cursorIndexOfSiteName);
-        _item.setSiteName(_tmpSiteName);
+        final int _tmpSiteType;
+        _tmpSiteType = _cursor.getInt(_cursorIndexOfSiteType);
+        _item.setSiteType(_tmpSiteType);
         final String _tmpLastUpdates;
         _tmpLastUpdates = _cursor.getString(_cursorIndexOfLastUpdates);
         _item.setLastUpdates(_tmpLastUpdates);
@@ -220,9 +205,6 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
         final String _tmpCoverSrc;
         _tmpCoverSrc = _cursor.getString(_cursorIndexOfCoverSrc);
         _item.setCoverSrc(_tmpCoverSrc);
-        final int _tmpLastRead;
-        _tmpLastRead = _cursor.getInt(_cursorIndexOfLastRead);
-        _item.setLastRead(_tmpLastRead);
         final int _tmpLastReadLast;
         _tmpLastReadLast = _cursor.getInt(_cursorIndexOfLastReadLast);
         _item.setLastReadLast(_tmpLastReadLast);
@@ -242,15 +224,11 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
   }
 
   @Override
-  public NetCartoon getNetCartoon(final String siteName, final String cartoonName) {
-    final String _sql = "select * from netCartoon where siteName = ? and cartoonName = ?";
+  public NetCartoon getNetCartoon(final int siteType, final String cartoonName) {
+    final String _sql = "select * from netCartoon where siteType = ? and cartoonName = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
     int _argIndex = 1;
-    if (siteName == null) {
-      _statement.bindNull(_argIndex);
-    } else {
-      _statement.bindString(_argIndex, siteName);
-    }
+    _statement.bindLong(_argIndex, siteType);
     _argIndex = 2;
     if (cartoonName == null) {
       _statement.bindNull(_argIndex);
@@ -263,11 +241,10 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
       final int _cursorIndexOfNcId = CursorUtil.getColumnIndexOrThrow(_cursor, "ncId");
       final int _cursorIndexOfCartoonName = CursorUtil.getColumnIndexOrThrow(_cursor, "cartoonName");
       final int _cursorIndexOfUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "url");
-      final int _cursorIndexOfSiteName = CursorUtil.getColumnIndexOrThrow(_cursor, "siteName");
+      final int _cursorIndexOfSiteType = CursorUtil.getColumnIndexOrThrow(_cursor, "siteType");
       final int _cursorIndexOfLastUpdates = CursorUtil.getColumnIndexOrThrow(_cursor, "lastUpdates");
       final int _cursorIndexOfIntroduction = CursorUtil.getColumnIndexOrThrow(_cursor, "introduction");
       final int _cursorIndexOfCoverSrc = CursorUtil.getColumnIndexOrThrow(_cursor, "coverSrc");
-      final int _cursorIndexOfLastRead = CursorUtil.getColumnIndexOrThrow(_cursor, "lastRead");
       final int _cursorIndexOfLastReadLast = CursorUtil.getColumnIndexOrThrow(_cursor, "lastReadLast");
       final int _cursorIndexOfCatalogsSize = CursorUtil.getColumnIndexOrThrow(_cursor, "catalogsSize");
       final int _cursorIndexOfTime = CursorUtil.getColumnIndexOrThrow(_cursor, "time");
@@ -283,9 +260,9 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
         final String _tmpUrl;
         _tmpUrl = _cursor.getString(_cursorIndexOfUrl);
         _result.setUrl(_tmpUrl);
-        final String _tmpSiteName;
-        _tmpSiteName = _cursor.getString(_cursorIndexOfSiteName);
-        _result.setSiteName(_tmpSiteName);
+        final int _tmpSiteType;
+        _tmpSiteType = _cursor.getInt(_cursorIndexOfSiteType);
+        _result.setSiteType(_tmpSiteType);
         final String _tmpLastUpdates;
         _tmpLastUpdates = _cursor.getString(_cursorIndexOfLastUpdates);
         _result.setLastUpdates(_tmpLastUpdates);
@@ -295,9 +272,6 @@ public final class NetCartoonDao_Impl implements NetCartoonDao {
         final String _tmpCoverSrc;
         _tmpCoverSrc = _cursor.getString(_cursorIndexOfCoverSrc);
         _result.setCoverSrc(_tmpCoverSrc);
-        final int _tmpLastRead;
-        _tmpLastRead = _cursor.getInt(_cursorIndexOfLastRead);
-        _result.setLastRead(_tmpLastRead);
         final int _tmpLastReadLast;
         _tmpLastReadLast = _cursor.getInt(_cursorIndexOfLastReadLast);
         _result.setLastReadLast(_tmpLastReadLast);

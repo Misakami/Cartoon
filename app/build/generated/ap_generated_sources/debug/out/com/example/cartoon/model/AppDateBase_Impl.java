@@ -14,6 +14,8 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
+import com.example.cartoon.model.Bean.CartoonMarkDao;
+import com.example.cartoon.model.Bean.CartoonMarkDao_Impl;
 import com.example.cartoon.model.Bean.NetCartoonCacheDao;
 import com.example.cartoon.model.Bean.NetCartoonCacheDao_Impl;
 import com.example.cartoon.model.Bean.NetCartoonDao;
@@ -21,7 +23,6 @@ import com.example.cartoon.model.Bean.NetCartoonDao_Impl;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -32,21 +33,25 @@ public final class AppDateBase_Impl extends AppDateBase {
 
   private volatile NetCartoonCacheDao _netCartoonCacheDao;
 
+  private volatile CartoonMarkDao _cartoonMarkDao;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(3) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `netCartoon` (`ncId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cartoonName` TEXT, `url` TEXT, `siteName` TEXT, `lastUpdates` TEXT, `introduction` TEXT, `coverSrc` TEXT, `lastRead` INTEGER NOT NULL, `lastReadLast` INTEGER NOT NULL, `catalogsSize` INTEGER NOT NULL, `time` INTEGER NOT NULL)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `netCache` (`ncCacheId` INTEGER NOT NULL, `catalogsUrl` TEXT, `catalogsTitle` TEXT, PRIMARY KEY(`ncCacheId`), FOREIGN KEY(`ncCacheId`) REFERENCES `netCartoon`(`ncId`) ON UPDATE CASCADE ON DELETE CASCADE )");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `netCartoon` (`ncId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cartoonName` TEXT, `url` TEXT, `siteType` INTEGER NOT NULL, `lastUpdates` TEXT, `introduction` TEXT, `coverSrc` TEXT, `lastReadLast` INTEGER NOT NULL, `catalogsSize` INTEGER NOT NULL, `time` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `netCache` (`cartoonName` TEXT NOT NULL, `siteType` INTEGER NOT NULL, `catalogsUrl` TEXT, `catalogsTitle` TEXT, PRIMARY KEY(`cartoonName`, `siteType`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `cartoonMark` (`markId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cartoonName` TEXT, `siteType` INTEGER NOT NULL, `lastRead` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '45d41b75f47b6c2382b5eaea83b778e7')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '248d82766145665a52329f1d98a5d9e5')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `netCartoon`");
         _db.execSQL("DROP TABLE IF EXISTS `netCache`");
+        _db.execSQL("DROP TABLE IF EXISTS `cartoonMark`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -66,7 +71,6 @@ public final class AppDateBase_Impl extends AppDateBase {
       @Override
       public void onOpen(SupportSQLiteDatabase _db) {
         mDatabase = _db;
-        _db.execSQL("PRAGMA foreign_keys = ON");
         internalInitInvalidationTracker(_db);
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
@@ -86,15 +90,14 @@ public final class AppDateBase_Impl extends AppDateBase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsNetCartoon = new HashMap<String, TableInfo.Column>(11);
+        final HashMap<String, TableInfo.Column> _columnsNetCartoon = new HashMap<String, TableInfo.Column>(10);
         _columnsNetCartoon.put("ncId", new TableInfo.Column("ncId", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCartoon.put("cartoonName", new TableInfo.Column("cartoonName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCartoon.put("url", new TableInfo.Column("url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsNetCartoon.put("siteName", new TableInfo.Column("siteName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsNetCartoon.put("siteType", new TableInfo.Column("siteType", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCartoon.put("lastUpdates", new TableInfo.Column("lastUpdates", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCartoon.put("introduction", new TableInfo.Column("introduction", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCartoon.put("coverSrc", new TableInfo.Column("coverSrc", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsNetCartoon.put("lastRead", new TableInfo.Column("lastRead", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCartoon.put("lastReadLast", new TableInfo.Column("lastReadLast", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCartoon.put("catalogsSize", new TableInfo.Column("catalogsSize", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCartoon.put("time", new TableInfo.Column("time", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -107,12 +110,12 @@ public final class AppDateBase_Impl extends AppDateBase {
                   + " Expected:\n" + _infoNetCartoon + "\n"
                   + " Found:\n" + _existingNetCartoon);
         }
-        final HashMap<String, TableInfo.Column> _columnsNetCache = new HashMap<String, TableInfo.Column>(3);
-        _columnsNetCache.put("ncCacheId", new TableInfo.Column("ncCacheId", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashMap<String, TableInfo.Column> _columnsNetCache = new HashMap<String, TableInfo.Column>(4);
+        _columnsNetCache.put("cartoonName", new TableInfo.Column("cartoonName", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsNetCache.put("siteType", new TableInfo.Column("siteType", "INTEGER", true, 2, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCache.put("catalogsUrl", new TableInfo.Column("catalogsUrl", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNetCache.put("catalogsTitle", new TableInfo.Column("catalogsTitle", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysNetCache = new HashSet<TableInfo.ForeignKey>(1);
-        _foreignKeysNetCache.add(new TableInfo.ForeignKey("netCartoon", "CASCADE", "CASCADE",Arrays.asList("ncCacheId"), Arrays.asList("ncId")));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysNetCache = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesNetCache = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoNetCache = new TableInfo("netCache", _columnsNetCache, _foreignKeysNetCache, _indicesNetCache);
         final TableInfo _existingNetCache = TableInfo.read(_db, "netCache");
@@ -121,9 +124,23 @@ public final class AppDateBase_Impl extends AppDateBase {
                   + " Expected:\n" + _infoNetCache + "\n"
                   + " Found:\n" + _existingNetCache);
         }
+        final HashMap<String, TableInfo.Column> _columnsCartoonMark = new HashMap<String, TableInfo.Column>(4);
+        _columnsCartoonMark.put("markId", new TableInfo.Column("markId", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCartoonMark.put("cartoonName", new TableInfo.Column("cartoonName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCartoonMark.put("siteType", new TableInfo.Column("siteType", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCartoonMark.put("lastRead", new TableInfo.Column("lastRead", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysCartoonMark = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesCartoonMark = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoCartoonMark = new TableInfo("cartoonMark", _columnsCartoonMark, _foreignKeysCartoonMark, _indicesCartoonMark);
+        final TableInfo _existingCartoonMark = TableInfo.read(_db, "cartoonMark");
+        if (! _infoCartoonMark.equals(_existingCartoonMark)) {
+          return new RoomOpenHelper.ValidationResult(false, "cartoonMark(com.example.cartoon.model.Bean.CartoonMark).\n"
+                  + " Expected:\n" + _infoCartoonMark + "\n"
+                  + " Found:\n" + _existingCartoonMark);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "45d41b75f47b6c2382b5eaea83b778e7", "0ae3cd38043b5c38bc7afdf50e67eb3f");
+    }, "248d82766145665a52329f1d98a5d9e5", "dc7a80226f52a7a5fab75f1b38521229");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -136,30 +153,21 @@ public final class AppDateBase_Impl extends AppDateBase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "netCartoon","netCache");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "netCartoon","netCache","cartoonMark");
   }
 
   @Override
   public void clearAllTables() {
     super.assertNotMainThread();
     final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
-    boolean _supportsDeferForeignKeys = android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP;
     try {
-      if (!_supportsDeferForeignKeys) {
-        _db.execSQL("PRAGMA foreign_keys = FALSE");
-      }
       super.beginTransaction();
-      if (_supportsDeferForeignKeys) {
-        _db.execSQL("PRAGMA defer_foreign_keys = TRUE");
-      }
       _db.execSQL("DELETE FROM `netCartoon`");
       _db.execSQL("DELETE FROM `netCache`");
+      _db.execSQL("DELETE FROM `cartoonMark`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
-      if (!_supportsDeferForeignKeys) {
-        _db.execSQL("PRAGMA foreign_keys = TRUE");
-      }
       _db.query("PRAGMA wal_checkpoint(FULL)").close();
       if (!_db.inTransaction()) {
         _db.execSQL("VACUUM");
@@ -191,6 +199,20 @@ public final class AppDateBase_Impl extends AppDateBase {
           _netCartoonCacheDao = new NetCartoonCacheDao_Impl(this);
         }
         return _netCartoonCacheDao;
+      }
+    }
+  }
+
+  @Override
+  public CartoonMarkDao markDao() {
+    if (_cartoonMarkDao != null) {
+      return _cartoonMarkDao;
+    } else {
+      synchronized(this) {
+        if(_cartoonMarkDao == null) {
+          _cartoonMarkDao = new CartoonMarkDao_Impl(this);
+        }
+        return _cartoonMarkDao;
       }
     }
   }

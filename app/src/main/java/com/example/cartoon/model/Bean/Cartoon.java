@@ -5,6 +5,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.SparseArray;
 
+import androidx.lifecycle.MutableLiveData;
+
 import java.util.ArrayList;
 
 public class Cartoon implements Parcelable {
@@ -23,6 +25,24 @@ public class Cartoon implements Parcelable {
         catalogsUrl = new ArrayList<>();
     }
 
+    public Cartoon(Cartoon cartoons, NetCartoonCache cache) {
+        this.url = cartoons.getUrl();
+        this.title = cartoons.getTitle();
+        this.coverSrc = cartoons.getCoverSrc();
+        this.type = cartoons.getType();
+        this.introduction = cartoons.getIntroduction();
+        this.lastUpdates = cartoons.getLastUpdates();
+        catalogsTitle = (ArrayList<String>) cache.getCatalogsTitle();
+        catalogsUrl = (ArrayList<String>) cache.getCatalogsUrl();
+        cartoonNum = new SparseArray<>();
+    }
+
+    public NetCartoon getNetCartoon(){
+        return new NetCartoon(this);
+    }
+    public NetCartoonCache getCache(){
+        return new NetCartoonCache(title,type,catalogsUrl,catalogsTitle);
+    }
 
     public Cartoon(String url, String title, String coverSrc, int type) {
         this.url = url;
@@ -31,6 +51,18 @@ public class Cartoon implements Parcelable {
         this.type = type;
         catalogsTitle = new ArrayList<>();
         catalogsUrl = new ArrayList<>();
+        cartoonNum = new SparseArray<>();
+    }
+
+    public Cartoon(NetCartoon cartoon,NetCartoonCache cache) {
+        this.url = cartoon.getUrl();
+        this.title = cartoon.getCartoonName();
+        this.coverSrc = cartoon.getCoverSrc();
+        this.type = cartoon.getSiteType();
+        this.lastUpdates = cartoon.getLastUpdates();
+        this.introduction = cartoon.getIntroduction();
+        catalogsTitle = (ArrayList<String>) cache.getCatalogsTitle();
+        catalogsUrl = (ArrayList<String>) cache.getCatalogsUrl();
         cartoonNum = new SparseArray<>();
     }
 

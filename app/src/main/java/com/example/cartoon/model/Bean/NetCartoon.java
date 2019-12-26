@@ -17,7 +17,7 @@ public class NetCartoon{
 
     private String url;
 
-    private String siteName;
+    private int siteType;
 
     /**
      *  最新章节名
@@ -29,10 +29,6 @@ public class NetCartoon{
     private String coverSrc;
 
     /**
-     *  上次看的章节
-     */
-    private int lastRead = 0;
-    /**
      * 上次点击书籍时的最新章节，判断是否显示有更新
      */
     private int lastReadLast;
@@ -42,6 +38,20 @@ public class NetCartoon{
     private int catalogsSize;
 
     private long time = new Date().getTime();
+
+    public NetCartoon() {
+    }
+
+    public NetCartoon(Cartoon cartoon){
+        cartoonName = cartoon.getTitle();
+        url = cartoon.getUrl();
+        siteType = cartoon.getType();
+        lastUpdates = cartoon.getLastUpdates();
+        introduction = cartoon.getIntroduction();
+        coverSrc = cartoon.getCoverSrc();
+        lastReadLast = cartoon.getCatalogsTitle().size();
+        catalogsSize = lastReadLast;
+    }
 
     public int getNcId() {
         return ncId;
@@ -67,13 +77,7 @@ public class NetCartoon{
         this.url = url;
     }
 
-    public String getSiteName() {
-        return siteName;
-    }
 
-    public void setSiteName(String siteName) {
-        this.siteName = siteName;
-    }
 
     public String getLastUpdates() {
         return lastUpdates;
@@ -99,14 +103,6 @@ public class NetCartoon{
         this.coverSrc = coverSrc;
     }
 
-    public int getLastRead() {
-        return lastRead;
-    }
-
-    public void setLastRead(int lastRead) {
-        this.lastRead = lastRead;
-    }
-
     public int getLastReadLast() {
         return lastReadLast;
     }
@@ -129,5 +125,29 @@ public class NetCartoon{
 
     public void setTime(long time) {
         this.time = time;
+    }
+
+    public int getSiteType() {
+        return siteType;
+    }
+
+    public void setSiteType(int siteType) {
+        this.siteType = siteType;
+    }
+
+    @Override
+    public String toString() {
+        return "NetCartoon{" +
+                "ncId=" + ncId +
+                ", cartoonName='" + cartoonName + '\'' +
+                ", url='" + url + '\'' +
+                ", siteType=" + siteType +
+                ", lastUpdates='" + lastUpdates + '\'' +
+                ", introduction='" + introduction + '\'' +
+                ", coverSrc='" + coverSrc + '\'' +
+                ", lastReadLast=" + lastReadLast +
+                ", catalogsSize=" + catalogsSize +
+                ", time=" + time +
+                '}';
     }
 }

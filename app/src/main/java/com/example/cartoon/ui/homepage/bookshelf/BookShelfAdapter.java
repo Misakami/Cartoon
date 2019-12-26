@@ -14,16 +14,35 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.cartoon.R;
 import com.example.cartoon.model.Bean.NetCartoon;
+import com.example.cartoon.model.Bean.NetCartoonCache;
 import com.example.cartoon.model.Util.GlideLoad;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookShelfAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private List<NetCartoon> cartoons;
+    private List<NetCartoon> cartoons = new ArrayList<>();
+    private List<NetCartoonCache> caches;
     private Context context;
+    private RecyclerView recyclerView;
+    private OnNetCartoonClickListen listen;
+
+    public BookShelfAdapter(RecyclerView recyclerView,OnNetCartoonClickListen listen){
+        this.recyclerView = recyclerView;
+        this.listen = listen;
+    }
 
     public void refresh(List<NetCartoon> cartoons){
         this.cartoons = cartoons;
+        recyclerView.post(new Runnable() {
+            @Override
+            public void run() {
+                notifyDataSetChanged();
+            }
+        });
+    }
+    public void setCaches(List<NetCartoonCache> caches){
+        this.caches = caches;
     }
 
     @NonNull
@@ -37,9 +56,23 @@ public class BookShelfAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof ViewHolder){
             ((ViewHolder) holder).onBindview(position);
+            holder.itemView.setClickable(true);
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listen.onClick(cartoons.get(position),caches.get(position));
+                }
+            });
+            holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    listen.onLongClick(cartoons.get(position),caches.get(position));
+                    return true;
+                }
+            });
         }
     }
 
@@ -69,14 +102,20 @@ public class BookShelfAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 Glide.with(itemView.getContext()).clear(bookshelf_crv);
             }
             if (netCartoon.getCoverSrc() != null){
-                GlideLoad.loadImage(itemView.getContext(),netCartoon.getUrl(),bookshelf_crv);
+                GlideLoad.loadImage(itemView.getContext(),netCartoon.getCoverSrc(),bookshelf_crv);
             }
             bookshelf_name.setText(netCartoon.getCartoonName());
+
             if (netCartoon.getLastReadLast() < netCartoon.getCatalogsSize()){
                 bookshelf_new.setVisibility(View.VISIBLE);
             }else {
                 bookshelf_new.setVisibility(View.INVISIBLE);
             }
         }
+    }
+
+    interface OnNetCartoonClickListen{
+        void onClick(NetCartoon netCartoon,NetCartoonCache cache);
+        void onLongClick(NetCartoon netCartoon,NetCartoonCache cache);
     }
 }

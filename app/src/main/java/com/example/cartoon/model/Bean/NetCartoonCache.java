@@ -1,32 +1,51 @@
 package com.example.cartoon.model.Bean;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
-import androidx.room.ForeignKey;
-import androidx.room.PrimaryKey;
+import androidx.room.Ignore;
 import androidx.room.TypeConverters;
 
 import java.util.List;
 
-import static androidx.room.ForeignKey.CASCADE;
 
-@Entity(tableName = "netCache"
-        ,foreignKeys = @ForeignKey(entity = NetCartoon.class, parentColumns = "ncId", childColumns = "ncCacheId",onDelete = CASCADE,onUpdate = CASCADE))
+@Entity(tableName = "netCache",primaryKeys = {"cartoonName","siteType"})
 @TypeConverters(ContentsConverter.class)
 public class NetCartoonCache {
 
-    @PrimaryKey
-    private int ncCacheId;
+    @NonNull
+    private String cartoonName;
+
+    @NonNull
+    private int siteType;
 
     private List<String> catalogsUrl;
 
     private List<String> catalogsTitle;
 
-    public int getNcCacheId() {
-        return ncCacheId;
+    public NetCartoonCache() { }
+
+    @Ignore
+    public NetCartoonCache(String cartoonName, int siteType, List<String> catalogsUrl, List<String> catalogsTitle) {
+        this.cartoonName = cartoonName;
+        this.siteType = siteType;
+        this.catalogsUrl = catalogsUrl;
+        this.catalogsTitle = catalogsTitle;
     }
 
-    public void setNcCacheId(int ncCacheId) {
-        this.ncCacheId = ncCacheId;
+    public String getCartoonName() {
+        return cartoonName;
+    }
+
+    public void setCartoonName(String cartoonName) {
+        this.cartoonName = cartoonName;
+    }
+
+    public int getSiteType() {
+        return siteType;
+    }
+
+    public void setSiteType(int siteType) {
+        this.siteType = siteType;
     }
 
     public List<String> getCatalogsUrl() {

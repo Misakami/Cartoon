@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.cartoon.BaseActivity;
 import com.example.cartoon.model.Bean.Cartoon;
+import com.example.cartoon.model.Util.CartoonMarkUtil;
 import com.example.cartoon.model.Util.Const;
 import com.example.cartoon.model.Util.JsoupUtil;
 import com.example.cartoon.model.Util.LogUtil;
@@ -38,7 +39,7 @@ public class ImageViewActivity extends BaseActivity {
 
     private JsoupUtil jsoupUtil;
     private Cartoon cartoon;
-    private int cartoonNum;
+    private int lastRead;
 
 
     @Override
@@ -68,14 +69,14 @@ public class ImageViewActivity extends BaseActivity {
             public void onPageSelected(int position) {
                 chapter.setText("第"+(adapter.getItemData(position).getChapter()+1)+"话");
                 pagenum.setText(adapter.getItemData(position).getPageNum()+"/"+adapter.getItemData(position).getIndex());
-                if (cartoonNum > adapter.getItemData(position).getChapter()) {
+                if (lastRead > adapter.getItemData(position).getChapter()) {
                     LogUtil.Fanye("加载上一张");
-                    cartoonNum = adapter.getItemData(position).getChapter();
-                    loadPre(cartoonNum - 1);
-                } else if (cartoonNum < adapter.getItemData(position).getChapter()) {
+                    lastRead = adapter.getItemData(position).getChapter();
+                    loadPre(lastRead - 1);
+                } else if (lastRead < adapter.getItemData(position).getChapter()) {
                     LogUtil.Fanye("加载下一张");
-                    cartoonNum = adapter.getItemData(position).getChapter();
-                    loadNext(cartoonNum + 1);
+                    lastRead = adapter.getItemData(position).getChapter();
+                    loadNext(lastRead + 1);
                 }
             }
 
@@ -94,16 +95,17 @@ public class ImageViewActivity extends BaseActivity {
         jsoupUtil = JsoupUtil.getsingleton();
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra(Const.INTENT);
-        cartoonNum = bundle.getInt(Const.CARTOONNum, 0);
         cartoon = bundle.getParcelable(Const.CARTOON);
+        assert cartoon != null;
+        lastRead = CartoonMarkUtil.getMark(cartoon.getTitle(),cartoon.getType());
         cartoon.setCartoonNum(new SparseArray<ArrayList<String>>());
-        jsoupUtil.cartoonImg(cartoon, cartoonNum, new JsoupUtil.ImgCallback() {
+        jsoupUtil.cartoonImg(cartoon, lastRead, new JsoupUtil.ImgCallback() {
             @Override
             public void success(ArrayList<String> img) {
-                cartoon.getCartoonNum().append(cartoonNum, img);
+                cartoon.getCartoonNum().append(lastRead, img);
                 final List<PageEntity> entities = new ArrayList<>();
                 for (int i = 0; i < img.size(); i++) {
-                    entities.add(new PageEntity(cartoonNum, i + 1, img.get(i),img.size()));
+                    entities.add(new PageEntity(lastRead, i + 1, img.get(i),img.size()));
                 }
                 runOnUiThread(new Runnable() {
                     @Override
@@ -113,8 +115,8 @@ public class ImageViewActivity extends BaseActivity {
                         adapter.notifyDataSetChanged();
                         viewPager.setCurrentItem(1,false);
                         viewPager.setCurrentItem(0,false);
-                        loadNext(cartoonNum + 1);
-                        loadPre(cartoonNum - 1);
+                        loadNext(lastRead + 1);
+                        loadPre(lastRead - 1);
                     }
                 });
             }
