@@ -66,6 +66,18 @@ public class Cartoon implements Parcelable {
         cartoonNum = new SparseArray<>();
     }
 
+    public Cartoon(NetCartoon cartoon) {
+        this.url = cartoon.getUrl();
+        this.title = cartoon.getCartoonName();
+        this.coverSrc = cartoon.getCoverSrc();
+        this.type = cartoon.getSiteType();
+        this.lastUpdates = cartoon.getLastUpdates();
+        this.introduction = cartoon.getIntroduction();
+        catalogsTitle = new ArrayList<>();
+        catalogsUrl =new ArrayList<>();
+        cartoonNum = new SparseArray<>();
+    }
+
 
     protected Cartoon(Parcel in) {
         url = in.readString();

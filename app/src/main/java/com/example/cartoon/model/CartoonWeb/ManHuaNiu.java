@@ -58,7 +58,6 @@ public class ManHuaNiu {
                 String text = e.text();
                 catalogsUrl.add(attr);
                 catalogsTitle.add(text);
-
             }
         } catch (IOException e) {
             e.printStackTrace();

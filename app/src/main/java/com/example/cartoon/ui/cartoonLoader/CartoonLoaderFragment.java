@@ -54,6 +54,12 @@ public class CartoonLoaderFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onDestroyView() {
+        view = null;
+        super.onDestroyView();
+    }
+
     private void initView() {
         page = view.findViewById(R.id.pageView);
         progress = view.findViewById(R.id.pageView_loading);
@@ -82,5 +88,4 @@ public class CartoonLoaderFragment extends Fragment {
                     }
                 }).into(page);
     }
-
 }

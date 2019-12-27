@@ -15,7 +15,7 @@ public class SetUp extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View inflate = inflater.inflate(R.layout.fragment_setup, container, false);
-        return inflate;
+        View view = inflater.inflate(R.layout.fragment_setup, container, false);
+        return view;
     }
 }

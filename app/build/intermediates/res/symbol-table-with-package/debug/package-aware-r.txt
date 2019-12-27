@@ -1122,7 +1122,9 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_back
 drawable ic_bookshelf
+drawable ic_catalog
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
@@ -1286,6 +1288,7 @@ id filled
 id fixed
 id forever
 id fragment_recycle
+id fragments
 id from
 id ghost_view
 id glide_custom_view_target_tag
@@ -1298,6 +1301,11 @@ id icon
 id icon_group
 id ifRoom
 id image
+id image_view_back
+id image_view_bottom
+id image_view_catLog
+id image_view_title
+id image_view_top
 id info
 id invisible
 id italic
@@ -1514,6 +1522,7 @@ layout abc_tooltip
 layout activity_catlog
 layout activity_homepage
 layout activity_image_view
+layout activity_test
 layout cartoon_page
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -1598,12 +1607,13 @@ string hide_bottom_view_on_scroll_behavior
 string leak_canary_analysis_failed
 string leak_canary_class_has_leaked
 string leak_canary_class_has_leaked_retaining
+string leak_canary_class_no_leak
 string leak_canary_could_not_save_text
-string leak_canary_could_not_save_title
 string leak_canary_delete
 string leak_canary_delete_all
 string leak_canary_delete_all_leaks_title
 string leak_canary_display_activity_label
+string leak_canary_download_dump
 string leak_canary_excluded_row
 string leak_canary_failure_report
 string leak_canary_help_detail
@@ -1611,8 +1621,7 @@ string leak_canary_help_title
 string leak_canary_leak_excluded
 string leak_canary_leak_excluded_retaining
 string leak_canary_leak_list_title
-string leak_canary_no_leak_text
-string leak_canary_no_leak_title
+string leak_canary_no_leak_details
 string leak_canary_notification_analysing
 string leak_canary_notification_channel
 string leak_canary_notification_dumping
@@ -1622,6 +1631,9 @@ string leak_canary_notification_reporting
 string leak_canary_permission_not_granted
 string leak_canary_permission_notification_text
 string leak_canary_permission_notification_title
+string leak_canary_result_failure_no_disk_space
+string leak_canary_result_failure_no_file
+string leak_canary_result_failure_title
 string leak_canary_share_heap_dump
 string leak_canary_share_leak
 string leak_canary_share_with

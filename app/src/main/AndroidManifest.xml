@@ -22,7 +22,8 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".ui.cartoonLoader.ImageViewActivity"
-            android:theme="@style/ReadAppTheme" />
+            android:theme="@style/ReadAppTheme"
+            android:launchMode="singleTask" />
         <activity android:name=".ui.catlog.CatlogActivity" />
         <activity android:name=".ui.homepage.HomePageActivity"
             android:windowSoftInputMode="adjustPan">

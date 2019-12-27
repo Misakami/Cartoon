@@ -58,6 +58,7 @@ public class CatlogViewModel extends ViewModel {
                 public void run() {
                     LogUtil.Log("数据库","插入数据库");
                     Cartoon cartoons = cartoon.getValue();
+                    assert cartoons != null;
                     NetCartoon netCartoon = AppDateBase.getInstance()
                             .cartoonDao()
                             .getNetCartoon(cartoons.getType(), cartoons.getTitle());

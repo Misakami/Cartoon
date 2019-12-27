@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.cartoon.model.AppDateBase;
 import com.example.cartoon.model.Bean.NetCartoon;
 import com.example.cartoon.model.Bean.NetCartoonCache;
+import com.example.cartoon.model.Util.JsoupUtil;
 import com.example.cartoon.model.Util.LogUtil;
 import com.example.cartoon.model.Util.Thread.DefaultExecutorSupplier;
 
@@ -14,14 +15,24 @@ import java.util.List;
 
 import kotlin.jvm.Synchronized;
 
+
 public class BookShelfViewModel extends ViewModel {
     private static final String TAG = "BookShelfViewModel";
     MutableLiveData<List<NetCartoon>> netCartoonUpdate = new MutableLiveData<>();
     MutableLiveData<List<NetCartoonCache>> netCartoonCache = new MutableLiveData<>();
 
-    @Synchronized
-    public void getUpdate(){
 
+    /**
+     * 通过传入的NetCartoon查找更新
+     */
+    @Synchronized
+    public void getUpdate() {
+        JsoupUtil.getsingleton().update(new JsoupUtil.UpdateCallback() {
+            @Override
+            public void success() {
+                getDatebase();
+            }
+        });
     }
 
     void click(final NetCartoon cartoon){

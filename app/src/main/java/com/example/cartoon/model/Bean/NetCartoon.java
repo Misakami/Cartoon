@@ -3,6 +3,8 @@ package com.example.cartoon.model.Bean;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Date;
 
 /**
@@ -135,6 +137,7 @@ public class NetCartoon{
         this.siteType = siteType;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "NetCartoon{" +

@@ -3,13 +3,18 @@ package com.example.cartoon.model.Util;
 
 import android.os.Build;
 
+import com.example.cartoon.model.AppDateBase;
 import com.example.cartoon.model.Bean.Cartoon;
+import com.example.cartoon.model.Bean.NetCartoon;
+import com.example.cartoon.model.Bean.NetCartoonCache;
 import com.example.cartoon.model.CartoonWeb.ManHuaNiu;
 import com.example.cartoon.model.CartoonWeb.ManKeZhan;
 import com.example.cartoon.model.CartoonWeb.Misaka;
+import com.example.cartoon.model.Util.Thread.DefaultExecutorSupplier;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -114,6 +119,7 @@ public class JsoupUtil {
         }
     }
 
+
     /**
      * 找到当前目录的所有图片
      *
@@ -142,12 +148,63 @@ public class JsoupUtil {
             executor.submit(new Runnable() {
                 @Override
                 public void run() {
-                    manHuaNiu.searchCartoonImg(cartoon, index,callback);
+                    manHuaNiu.searchCartoonImg(cartoon, index, callback);
                 }
             });
         }
     }
 
+
+    public void update(final UpdateCallback callback){
+        DefaultExecutorSupplier.getInstance()
+                .forBackgroundTasks()
+                .execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            List<NetCartoon> netCartoons = AppDateBase.getInstance()
+                                    .cartoonDao()
+                                    .getNetCartoons();
+                            final CountDownLatch countDownLatch = new CountDownLatch(netCartoons.size());
+                            for (NetCartoon netCartoon : netCartoons
+                            ) {
+                                final Cartoon cartoon = new Cartoon(netCartoon);
+                                DefaultExecutorSupplier.getInstance()
+                                        .forBackgroundTasks()
+                                        .execute(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                catalog(cartoon, new LogCallback() {
+                                                    @Override
+                                                    public void success(Cartoon cartoon) {
+                                                        NetCartoonCache cache = cartoon.getCache();
+                                                        AppDateBase.getInstance()
+                                                                .cacheDao()
+                                                                .Update(cache);
+                                                        NetCartoon net = AppDateBase.getInstance()
+                                                                .cartoonDao()
+                                                                .getNetCartoon(cartoon.getType(), cartoon.getTitle());
+                                                        net.setCatalogsSize(cache.getCatalogsTitle().size());
+                                                        AppDateBase.getInstance()
+                                                                .cartoonDao()
+                                                                .upDate(net);
+                                                        countDownLatch.countDown();
+                                                    }
+                                                });
+                                            }
+                                        });
+                            }
+                            countDownLatch.await();
+                            callback.success();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+    }
+    public interface UpdateCallback{
+        void success();
+    }
 
     public interface Callback {
         void success(List<Cartoon> cartoons);
@@ -160,4 +217,5 @@ public class JsoupUtil {
     public interface ImgCallback {
         void success(ArrayList<String> img);
     }
+
 }
