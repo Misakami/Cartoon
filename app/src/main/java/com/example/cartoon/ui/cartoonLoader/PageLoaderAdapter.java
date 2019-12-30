@@ -39,7 +39,7 @@ public class PageLoaderAdapter extends OpenFragmentStatePagerAdapter<PageEntity>
 
     @Override
     int getDataPosition(PageEntity data) {
-        return data == null ? -1 : entities.indexOf(data);
+        return entities.contains(data) ?  entities.indexOf(data) : -1;
     }
 
     @Override

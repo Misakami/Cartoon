@@ -18,7 +18,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.cartoon.BaseActivity;
+import com.example.cartoon.model.AppDateBase;
 import com.example.cartoon.model.Bean.Cartoon;
+import com.example.cartoon.model.Bean.CartoonMark;
 import com.example.cartoon.model.Util.CartoonMarkUtil;
 import com.example.cartoon.model.Util.Const;
 import com.example.cartoon.model.Util.JsoupUtil;
@@ -26,6 +28,7 @@ import com.example.cartoon.model.Util.LogUtil;
 import com.example.cartoon.model.Util.ScreenUtils;
 import com.example.cartoon.model.Util.StringUtils;
 import com.example.cartoon.R;
+import com.example.cartoon.model.Util.Thread.DefaultExecutorSupplier;
 import com.example.cartoon.model.Util.notchtools.NotchTools;
 import com.example.cartoon.model.Util.notchtools.core.NotchProperty;
 import com.example.cartoon.model.Util.notchtools.core.OnNotchCallBack;
@@ -79,6 +82,9 @@ public class ImageViewActivity extends BaseActivity {
         image_view_catLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!menuShow){
+                    return;
+                }
                 Intent intent = new Intent(ImageViewActivity.this, CatlogActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putParcelable(CatlogActivity.CHOSECARTOON,cartoon);
@@ -95,7 +101,6 @@ public class ImageViewActivity extends BaseActivity {
                 NotchTools.getFullScreenTools().fullScreenUseStatus(ImageViewActivity.this, new OnNotchCallBack() {
                     @Override
                     public void onNotchPropertyCallback(final NotchProperty notchProperty) {
-                        LogUtil.Log("刘海","长度为"+notchProperty.geNotchHeight());
                         if (notchProperty != null && notchProperty.isNotch()) {
                             top.post(new Runnable() {
                                 @Override
@@ -333,6 +338,20 @@ public class ImageViewActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         unregisterReceiver(mReceiver);
+        DefaultExecutorSupplier.getInstance()
+                .forLightWeightBackgroundTasks()
+                .execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        CartoonMark mark = AppDateBase.getInstance()
+                                .markDao()
+                                .select(cartoon.getTitle(), cartoon.getType());
+                        mark.setLastRead(lastRead);
+                        AppDateBase.getInstance()
+                                .markDao()
+                                .upDate(mark);
+                    }
+                });
         super.onDestroy();
     }
 }

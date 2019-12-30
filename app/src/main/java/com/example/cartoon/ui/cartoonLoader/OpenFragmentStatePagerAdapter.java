@@ -199,8 +199,6 @@ public abstract class OpenFragmentStatePagerAdapter<T> extends PagerAdapter {
                 }
             }
         }
-        //如果存在null数据说明出问题了先暂时清除
-        pendingItemInfos.remove(null);
         mItemInfos = pendingItemInfos;
     }
 
@@ -214,7 +212,8 @@ public abstract class OpenFragmentStatePagerAdapter<T> extends PagerAdapter {
             state.putParcelableArray("states", fss);
         }
         for (int i = 0; i < mItemInfos.size(); i++) {
-            Fragment f = mItemInfos.get(i) != null ?  mItemInfos.get(i).fragment : null;
+            if (mItemInfos.get(i) == null) continue;
+            Fragment f = mItemInfos.get(i).fragment;
             if (f != null && f.isAdded()) {
                 if (state == null) {
                     state = new Bundle();

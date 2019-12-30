@@ -45,7 +45,7 @@ public class ImageViewPager extends ViewPager {
         }
         if (ev.getAction() == MotionEvent.ACTION_UP||ev.getAction() == MotionEvent.ACTION_CANCEL){
             Log.i("viewpager", "onTouchEvent: "+getScrollX()+" "+getScrollY());
-            if (getScrollX() == 0 && getScrollY() == 0){
+            if (getScrollX() % 1080 == 0 && getScrollY() == 0){
                 int x = (int) ev.getX();
                 if (x > weight/3 && x < weight/3*2){
                     notUse = true;
