@@ -88,11 +88,22 @@ public class BookShelf extends Fragment implements BookShelfAdapter.OnNetCartoon
         viewModel.getDatebase();
     }
 
+    private void getUpdate(){
+        refreshLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                refreshLayout.setRefreshing(true);
+                viewModel.getUpdate();
+            }
+        });
+    }
+
     @Override
     public void onClick(NetCartoon netCartoon, NetCartoonCache cache) {
         netCartoon.setTime(new Date().getTime());
         netCartoon.setLastReadLast(netCartoon.getCatalogsSize());
         viewModel.click(netCartoon);
+
 
         Cartoon cartoon = new Cartoon(netCartoon, cache);
         Intent intent = new Intent(BookShelf.this.getContext(), ImageViewActivity.class);
@@ -117,15 +128,5 @@ public class BookShelf extends Fragment implements BookShelfAdapter.OnNetCartoon
                 })
                 .setCancelable(true)
                 .show();
-    }
-
-    private void getUpdate(){
-        refreshLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                refreshLayout.setRefreshing(true);
-                viewModel.getUpdate();
-            }
-        });
     }
 }

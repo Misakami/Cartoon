@@ -64,6 +64,7 @@ public class ManHuaNiu {
         }
         cartoon.setCatalogsTitle(catalogsTitle);
         cartoon.setCatalogsUrl(catalogsUrl);
+        cartoon.setLastUpdates(catalogsTitle.get(catalogsTitle.size()-1));
         callback.success(cartoon);
     }
 

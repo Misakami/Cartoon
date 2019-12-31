@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -48,9 +47,9 @@ public class ImageViewActivity extends BaseActivity {
     private ImageViewPager viewPager;
     private PageLoaderAdapter adapter;
     private BatteryView batteryView;
-    private TextView pagenum;
+    private TextView pageNum;
     private TextView chapter;
-    private TextView powernum;
+    private TextView powerNum;
     private TextView time;
     private ImageView image_view_back;
     private ImageView image_view_catLog;
@@ -85,6 +84,8 @@ public class ImageViewActivity extends BaseActivity {
                 if (!menuShow){
                     return;
                 }
+                top.clearSlideAnimation();
+                bottom.clearSlideAnimation();
                 Intent intent = new Intent(ImageViewActivity.this, CatlogActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putParcelable(CatlogActivity.CHOSECARTOON,cartoon);
@@ -121,9 +122,9 @@ public class ImageViewActivity extends BaseActivity {
 
     private void initView() {
         chapter = findViewById(R.id.chapter);
-        pagenum = findViewById(R.id.pagenum);
+        pageNum = findViewById(R.id.pagenum);
         batteryView = findViewById(R.id.battery);
-        powernum = findViewById(R.id.power_num);
+        powerNum = findViewById(R.id.power_num);
         time = findViewById(R.id.time_num);
         image_view_back = findViewById(R.id.image_view_back);
         image_view_catLog = findViewById(R.id.image_view_catLog);
@@ -142,7 +143,7 @@ public class ImageViewActivity extends BaseActivity {
             @Override
             public void onPageSelected(int position) {
                 chapter.setText("第" + (adapter.getItemData(position).getChapter() + 1) + "话");
-                pagenum.setText(adapter.getItemData(position).getPageNum() + "/" + adapter.getItemData(position).getIndex());
+                pageNum.setText(adapter.getItemData(position).getPageNum() + "/" + adapter.getItemData(position).getIndex());
                 if (lastRead > adapter.getItemData(position).getChapter()) {
                     LogUtil.Fanye("加载上一张");
                     lastRead = adapter.getItemData(position).getChapter();
@@ -277,7 +278,7 @@ public class ImageViewActivity extends BaseActivity {
             if (Objects.requireNonNull(intent.getAction()).equals(Intent.ACTION_BATTERY_CHANGED)) {
                 int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
                 batteryView.setPower(level);
-                powernum.setText(level + "%");
+                powerNum.setText(level + "%");
             } else if (intent.getAction().equals(Intent.ACTION_TIME_TICK)) {
                 time.setText(StringUtils.dateConvert(System.currentTimeMillis(), "HH:mm"));
             }

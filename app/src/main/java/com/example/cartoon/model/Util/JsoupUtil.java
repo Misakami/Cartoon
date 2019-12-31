@@ -185,6 +185,7 @@ public class JsoupUtil {
                                                                 .cartoonDao()
                                                                 .getNetCartoon(cartoon.getType(), cartoon.getTitle());
                                                         net.setCatalogsSize(cache.getCatalogsTitle().size());
+                                                        net.setLastUpdates(cartoon.getLastUpdates());
                                                         AppDateBase.getInstance()
                                                                 .cartoonDao()
                                                                 .upDate(net);

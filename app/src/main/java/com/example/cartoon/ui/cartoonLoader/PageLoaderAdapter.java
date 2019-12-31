@@ -68,7 +68,6 @@ public class PageLoaderAdapter extends OpenFragmentStatePagerAdapter<PageEntity>
                 nowEntities.clear();
                 nowEntities.addAll(nexEntities);
                 nexEntities.clear();
-                LogUtil.Fanye(entities.toString());
                 notifyDataSetChanged();
                 return;
             }else {

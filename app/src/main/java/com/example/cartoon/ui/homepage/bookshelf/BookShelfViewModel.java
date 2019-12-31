@@ -65,7 +65,6 @@ public class BookShelfViewModel extends ViewModel {
             public void run() {
                 List<NetCartoon> netCartoons = AppDateBase.getInstance().cartoonDao().getNetCartoons();
                 netCartoonUpdate.postValue(netCartoons);
-                LogUtil.Log("数据库",netCartoons.size()+"");
                 List<NetCartoonCache> cartoonCaches = new ArrayList<>();
                 for (NetCartoon netCartoon:netCartoons) {
                     NetCartoonCache netCartoonCache = AppDateBase.getInstance().cacheDao().getcatLog(netCartoon.getCartoonName(),netCartoon.getSiteType());
